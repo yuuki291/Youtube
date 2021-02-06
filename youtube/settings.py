@@ -26,7 +26,8 @@ SECRET_KEY = '0dmikgjzaeng$5&oo2_)n(58#cpf_w_70&is__)l)c&d$ke2h*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.ngrok.io']
+# '.ngrok.io'
 
 # Application definition
 
@@ -59,7 +60,11 @@ MIDDLEWARE = [
 
 # localhost:3000のアクセスを許可
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
+    # react
+    "http://localhost:3000",
+    # node.js
+    "http://localhost:8080",
+    # ngrok
 ]
 
 ROOT_URLCONF = 'youtube.urls'
